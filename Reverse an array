@@ -1,0 +1,7 @@
+def reverse(arr, len):
+    for i in range(len//2):
+        arr[i], arr[len-i-1]=arr[len-i-1], arr[i]
+    return arr
+    
+arr=[1,2,3,35,5]
+print(reverse(arr, len(arr)))
