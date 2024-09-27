@@ -1,0 +1,6 @@
+def sortarr(arr):
+    return arr.sort()
+    
+arr=[7,1,3,9,6]
+a=sortarr(arr)
+print(arr)
