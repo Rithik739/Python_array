@@ -1,0 +1,11 @@
+def duplicate(arr):
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            if arr[i]==arr[j]:
+                print("duplicate occurs and value is ",arr[i])
+                return
+    print("nope")     
+    
+        
+arr=[1,2,2,3,5,4]
+duplicate(arr)
