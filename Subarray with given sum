@@ -40,3 +40,28 @@ if __name__ == "__main__":
     result = subarray_sum(arr, n, target_sum)
     for i in result:
         print(i, end=" ")
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Example Walkthrough:
+
+Suppose arr = [1, 2, 3, 7, 5] and target_sum = 12.
+
+The outer loop starts with i = 0 and initializes current_sum = arr[0] = 1.
+The inner loop adds the next elements: 1 + 2 + 3 + 7 = 13 (exceeds target).
+Move to i = 1, current_sum = arr[1] = 2.
+2 + 3 + 7 = 12: This matches the target, so it returns the result [2, 4] (subarray from index 2 to 4).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
