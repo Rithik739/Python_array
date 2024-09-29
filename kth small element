@@ -1,0 +1,9 @@
+def ksmall(arr, n, k):
+    arr.sort()
+    return arr[n-1]
+    
+arr=[2,7,8,2,3,5,4]
+n=len(arr)
+k=4
+a=ksmall(arr,n,k)
+print(a)
