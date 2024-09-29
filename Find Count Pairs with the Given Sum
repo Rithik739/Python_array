@@ -1,0 +1,15 @@
+def subarr(arr1):
+    n1=len(arr1)
+    res=[]
+    for i in range(n1):
+        for j in range(i+1, n1):
+            arr=arr1[i]+arr1[j]
+            if arr==target:
+               res.append(target)
+    return len(res)
+    
+    
+arr1=[1,2,3,4,5,6,7,8,9]
+target=6
+a=subarr(arr1)
+print(a)
