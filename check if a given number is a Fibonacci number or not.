@@ -1,0 +1,20 @@
+# Python program to check if a given number is a Fibonacci number
+
+# First two Fibonacci terms
+fib_nums = [0, 1]  
+
+number = int(input('Enter the number you want to check for Fibonacci number: '))
+
+# Early return for negative numbers
+if number < 0:
+    print(f"No. {number} is NOT a Fibonacci number.")
+else:
+    # Generate Fibonacci numbers up to the input number
+    while fib_nums[-1] < number:
+        fib_nums.append(fib_nums[-1] + fib_nums[-2])
+
+    # Print result
+    if number in fib_nums:
+        print(f"Yes. {number} is a Fibonacci number.")
+    else:
+        print(f"No. {number} is NOT a Fibonacci number.")
