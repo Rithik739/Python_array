@@ -1,0 +1,21 @@
+def duplicate(list1):
+    a=list(set(list1))
+    return a
+ 
+list1=[1,2,2,3,3,4]   
+print(duplicate(list1))
+    
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Without using built in function
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+def remove_duplicates(lst):
+    unique = []
+    for item in lst:
+        if item not in unique:  # Check if the item is already in the unique list
+            unique.append(item)
+    return unique
+
+# Test the function
+list1 = [1, 2, 2, 3, 3, 4]
+print(remove_duplicates(list1))  # Output: [1, 2, 3, 4]
