@@ -12,3 +12,55 @@ def has_matching_brackets(input_string):
 # Test the function
 input_string = "{[(])}"
 print(has_matching_brackets(input_string))  # Output: True
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+def matching(char):
+    a=0
+    b=0
+    c=0
+    d=0
+    e=0
+    f=0
+    for i in char:
+        if i=='(':
+            a+=1
+        elif i==')':
+            b+=1
+        elif i=='[':
+            c+=1
+        elif i==']':
+            d+=1
+        elif i=='{':
+            e+=1
+        elif i=='}':
+            f+=1
+    return a==b and c==d and e==f
+    
+print(matching('{([)}'))
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+This will give us in proper formate so we are using syavk
+
+
+def is_balanced(input_string):
+    stack = []
+    bracket_map = {')': '(', '}': '{', ']': '['}  # Map of closing to opening brackets
+    
+    for char in input_string:
+        if char in bracket_map.values():  # If it's an opening bracket
+            stack.append(char)
+        elif char in bracket_map.keys():  # If it's a closing bracket
+            if stack and stack[-1] == bracket_map[char]:  # Check for a matching opening bracket
+                stack.pop()  # Remove the matched opening bracket
+            else:
+                return False  # Mismatch found
+        else:
+            return False  # Invalid character
+    
+    return len(stack) == 0  # True if all brackets are balanced
+
+# Test input
+input_string = "{[(])}"
+print(is_balanced(input_string))  # Should return False
