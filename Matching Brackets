@@ -1,0 +1,14 @@
+def has_matching_brackets(input_string):
+    # Counters for each type of bracket
+    counts = {'(': 0, ')': 0, '[': 0, ']': 0, '{': 0, '}': 0}
+    
+    for char in input_string:
+        if char in counts:  # Only count valid brackets
+            counts[char] += 1
+
+    # Check if the counts of opening and closing brackets match
+    return counts['('] == counts[')'] and counts['['] == counts[']'] and counts['{'] == counts['}']
+
+# Test the function
+input_string = "{[(])}"
+print(has_matching_brackets(input_string))  # Output: True
